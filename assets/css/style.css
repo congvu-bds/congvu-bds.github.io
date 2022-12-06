@@ -2151,20 +2151,22 @@ a:hover {
 .card-title-c h2{
   font-weight: bold;
   color: #C20000 !important;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #505050;
+  padding-bottom: 10px !important;
 }
 
 .card-title-c h3 {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #c65a0d !important;
+  padding-bottom: 10px !important;
 }
 
 .card-title-c h4 {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #076467 !important;
+  font-weight: normal;
+  font-size: 1.0rem;
+  color: #000000 !important;
 }
 
 .card-body-c .content-c{

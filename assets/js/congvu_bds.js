@@ -127,6 +127,7 @@ function showResultOfSearch(){
 function renderToWebsite(data){
     htmlListInfo = "";
     htmlTitleInfo = "";
+    htmlContactInfo = ""
 
     for(var count = 0; count < data.length; count++){
         htmlListInfo = htmlListInfo + "<a href=\"#info" + String(count+1) + "\" onclick=\"modalInfoRender(" + String(count+1) + ")\">"
@@ -145,34 +146,36 @@ function renderToWebsite(data){
 
                                     + "<i class=\"fas fa-warehouse\"></i>"
 
-                                    + "</span> " + data[count]['area'] + "&nbsp; &nbsp; &nbsp;"
-                                    + "<span style=\"font-weight: normal; color: #555555\">"
-                                    + "<i class=\"fas fa-compass\"></i>"
-                                    + "</span> " + data[count]['directionhouse'] + "&nbsp; &nbsp; &nbsp;" + "</h3>"
+                                    + "</span> " + data[count]['area']
+                                    + "</h3>"
   
-                                    + "<h4>" + data[count]['place'] + ", HCM" + "<span style=\"color: #0b8e92\">" + " > " + data[count]['typerealestate'] + "</span>"
-                                    + "<span style=\"color: #10abb1\">" + " > " + data[count]['typeservice'] + "</span>"
+                                    + "<h4>"
+                                    + "<span style=\"color: #555555;\">"
+                                    + "<i class=\"fas fa-map-marker-alt\"></i>&nbsp;"
+                                    + "</span>"
+                                    + data[count]['place'] + ", HCM"
+                                    + "&nbsp; &nbsp; &nbsp;"
+                                    
+                                    + "<span style=\"color: #555555;\">"
+                                    + "<i class=\"fas fa-home\"></i>&nbsp;"
+                                    + "</span>"
+
+                                    + data[count]['typerealestate']
+                                    + "&nbsp; &nbsp; &nbsp;"
+                                    
+                                    + "<span style=\"color: #555555;\">"
+                                    + "<i class=\"fas fa-bullhorn\"></i>&nbsp;"
+                                    + "</span>"
+                                    
+
+                                    
+                                    + data[count]['typeservice']
+
                                     
                                     + "</h4></div>"
                                     + "<div class=\"card-body-c\">"
-                                    + "<p class=\"content-c\">" + data[count]['description'] + "</p>"
-                                    + "<p class=\"content-c\">"
-
-                                    + "<span style=\"font-weight: normal; color: #555555\">"
-                                    + "<i class=\"fas fa-id-card\"></i>"
-                                    + "</span>"
                                     
-                                    
-                                    + "<span style=\"font-weight: bold; color: blue\"> " + data[count]['author']
-                                    + "</span>&nbsp; &nbsp; &nbsp;"
-
-                                    
-                                    + "<span style=\"font-weight: normal; color: #555555\">"
-                                    + "<i class=\"fa fa-phone\"></i>"
-                                    + "</span>"
-
-                                    + " <strong style=\"color:blue;\">" + data[count]['phonenumber'] + "</strong></p>"
-                                    + "<p>[ID: " + data[count]['code'] + "] "
+                                    + "<p class=\"content-c\">[ID: " + data[count]['code'] + "] "
                                     + "Ngày đăng tin: <strong>" + data[count]['dateupload'] + "</strong></p>"
                                     + "</div></div></div></a>";  
     }
@@ -183,8 +186,21 @@ function renderToWebsite(data){
                                     + "<i class=\"bi bi-search\" style=\"font-size:48px;color:#2eca6a\"></i>"
                                     + "<span style=\"color: #5F6368; font-weight: normal;\"> Kết Quả </span>" + "(" + String(data.length) + " tin)"
                                     + "</h2></div></div>";
+                    
+        htmlContactInfo = htmlContactInfo
+                                    + "<span style=\"font-weight: normal; color: #555555\">"
+                                    + "<i class=\"fas fa-id-card\"></i>"
+                                    + "</span>"
+                                    + "<span style=\"font-weight: bold; color: blue\"> Mr.Công"
+                                    + "</span>&nbsp; &nbsp; &nbsp;"                                    
+                                    + "<span style=\"font-weight: normal; color: #555555\">"
+                                    + "<i class=\"fa fa-phone\"></i>"
+                                    + "</span>"
+                                    + " <strong style=\"color:blue;\">0903 380 652</strong>";
+        
         document.getElementById("rowRenderTitle").innerHTML = htmlTitleInfo;
         document.getElementById("rowRenderInfo").innerHTML = htmlListInfo;
+        document.getElementById("contractInfo").innerHTML = htmlContactInfo;
         document.getElementById('main').scrollIntoView();
     }
     else{
@@ -194,8 +210,21 @@ function renderToWebsite(data){
                                     + "<i class=\"fa fa-star\" style=\"font-size:48px;color:rgb(248, 170, 1)\"></i>"
                                     + " Tin Nổi Bật " + "<i class=\"fa fa-star\" style=\"font-size:48px;color:rgb(248, 170, 1)\"></i>"
                                     + "</h2></div></div>";        
+        htmlContactInfo = htmlContactInfo
+                                    + "<span style=\"font-weight: normal; color: #555555\">"
+                                    + "<i class=\"fas fa-id-card\"></i>"
+                                    + "</span>"
+                                    + "<span style=\"font-weight: bold; color: blue\"> Mr.Công"
+                                    + "</span>&nbsp; &nbsp; &nbsp;"                                    
+                                    + "<span style=\"font-weight: normal; color: #555555\">"
+                                    + "<i class=\"fa fa-phone\"></i>"
+                                    + "</span>"
+                                    + " <strong style=\"color:blue;\">0903 380 652</strong>";
+        
         document.getElementById("rowRenderTitle").innerHTML = htmlTitleInfo;
         document.getElementById("rowRenderInfo").innerHTML = htmlListInfo;
+        document.getElementById("contractInfo").innerHTML = htmlContactInfo;
+        
     }
     
     
