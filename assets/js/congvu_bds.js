@@ -136,7 +136,7 @@ function renderToWebsite(data){
                                     + "<img class=\"img-header\" src=\"" + data[count]['image1'] + "\">" + "</div>"
                                     + "<div class=\"col-md-8 col-sm-8 col-12 card-info-c\">"
                                     + "<div class=\"card-title-c align-self-center\">"
-                                    + "<h2>" + data[count]['title'].toUpperCase() + "</h2>" + "<h3>"
+                                    + "<h2>" + data[count]['title'] + "</h2>" + "<h3>"
                                     + "<span style=\"font-weight: normal; color: #555555\">"
 
                                     + "<i class=\"fas fa-money-bill-wave\"></i>"
@@ -176,7 +176,7 @@ function renderToWebsite(data){
                                     + "<div class=\"card-body-c\">"
                                     
                                     + "<p class=\"content-c\">[ID: " + data[count]['code'] + "] "
-                                    + "Ngày đăng tin: <strong>" + data[count]['dateupload'] + "</strong></p>"
+                                    + "Ngày đăng tin: " + data[count]['dateupload'] + "</p>"
                                     + "</div></div></div></a>";  
     }
     if(checkStatusSearch == true){
