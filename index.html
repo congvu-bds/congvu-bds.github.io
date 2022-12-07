@@ -275,17 +275,24 @@
                                                   + "<img src=\"" + data[indexInfo]['image5'] + "\"></div>"
 
                                                   + "<div class=\"modal-content-header\">"
-                                                  + "<p class=\"info-item-header\">" + "<span style=\"color: #0b8e92\">" + data[indexInfo]['place'] + ", HCM" + "</span>"
-                                                  + "<span style=\"color: #c34a16\">" + " > " + data[indexInfo]['typerealestate'] + "</span>"
-                                                  + "<span style=\"color: #e65b1f\">" + " > " + data[indexInfo]['typeservice'] + "</span>"
 
+                                                  + "<p class=\"info-item-header\">"
+                                                                                                    
+                                                  + "<span style=\"color: #555555;\">"
+                                                  + "<i class=\"fas fa-home\"></i>&nbsp;"
+                                                  + "</span>"
 
+                                                  + data[indexInfo]['typerealestate']
+                                                  + "&nbsp; &nbsp; &nbsp;"
+                                                  
+                                                  + "<span style=\"color: #555555;\">"
+                                                  + "<i class=\"fas fa-bullhorn\"></i>&nbsp;"
+                                                  + "</span>"
+                                                  + data[indexInfo]['typeservice']
+                                                  + "</p>"
+                                                  
                                                   + "<h2>" + data[indexInfo]['title'] + "</h2>"
                                                   + "<p class=\"info-item-header\">" + data[indexInfo]['address'] + "</p></div>"
-
-                                                  
-
-
 
                                                   + "<div class=\"modal-content-info\">"
                                                   + "<h4 class=\"title-description-detail\">Mô tả chi tiết</h4>"
