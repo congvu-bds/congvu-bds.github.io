@@ -409,14 +409,21 @@
 <script>
   let prevScrollpos = window.pageYOffset;
     window.onscroll = function() {      
-      let currentScrollPos = window.pageYOffset;
-      
-      if (prevScrollpos < currentScrollPos && currentScrollPos > 100) {
+      if(modal.style.display === "block"){
         document.getElementById("navbarBDS").style.display = "none";        
-      } else {
-        document.getElementById("navbarBDS").style.display = "block";
       }
-      prevScrollpos = currentScrollPos;
+      else{
+        let currentScrollPos = window.pageYOffset;
+      
+        if (prevScrollpos < currentScrollPos && currentScrollPos > 100) {
+          document.getElementById("navbarBDS").style.display = "none";
+        } else {
+          document.getElementById("navbarBDS").style.display = "block";
+        }
+        prevScrollpos = currentScrollPos;
+
+      }
+      
     };
 </script>
 </html>

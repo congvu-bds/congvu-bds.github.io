@@ -145,7 +145,7 @@ a:hover {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 5px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -445,6 +445,7 @@ a:hover {
   top: 0;
   font-weight: bold;
 }
+
 
 /* Container for image text */
 .modal-content-header {
@@ -2117,6 +2118,7 @@ a:hover {
   
   max-height: 95%;
   max-width: 95%;
+  border-radius: 1%;
 
 }
 
