@@ -1302,9 +1302,8 @@ a:hover {
   }
   
   .card-box-c {
-    margin-bottom: 2rem;
     float: left;
-    border-color: #F2F2F2;  
+    border-color: #F2F2F2;
     border-style: solid;
     border-width: 2px;
   }
@@ -1503,7 +1502,6 @@ a:hover {
     font-size: 3.5rem;
   }
   .card-box-c {
-    margin-bottom: 2rem;
     display: inline-flex !important;
     float: left;
     border-color: #F2F2F2;  
@@ -1614,7 +1612,7 @@ a:hover {
   .card-box-b,
   .card-box-c,
   .card-box-d {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1631,7 +1629,7 @@ a:hover {
   .grid .card-box-b,
   .grid .card-box-c,
   .grid .card-box-d {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -2100,17 +2098,15 @@ a:hover {
 .card-box-c {
   position: relative;
   float: left;
-  padding-right: 0.5rem;
+  
+  margin-bottom: 2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 
 /*
   Add code by CongVu
-*/
- 
-  border-color: #F2F2F2;
-  
-  border-style: solid;
-  border-width: 2px;
-
+*/ 
+  box-shadow: 0 0px 2px 0 rgb(60 64 67 / 10%), 0 0px 6px 0px rgb(60 64 67 / 25%);
 /*
   End add code by CongVu
 */
@@ -2134,7 +2130,6 @@ a:hover {
 
 @media (max-width: 767px) {
   .card-box-c {
-    margin-bottom: 2rem;
     float: left;
     border-color: #F2F2F2;  
     border-style: solid;
@@ -2164,7 +2159,6 @@ a:hover {
   }
 
   .card-box-c {
-    margin-bottom: 2rem;
     float: left;
     border-color: #F2F2F2;  
     border-style: solid;
@@ -2238,7 +2232,6 @@ a:hover {
   }
 
   .card-box-c {
-    margin-bottom: 2rem;
     float: left;
     border-color: #F2F2F2;  
     border-style: solid;
@@ -2253,7 +2246,6 @@ a:hover {
   }
 
   .card-box-c {
-    margin-bottom: 2rem;
     float: left;
     border-color: #F2F2F2;  
     border-style: solid;
@@ -2275,7 +2267,6 @@ a:hover {
   }
 
   .card-box-c {
-    margin-bottom: 2rem;
     display: inline-flex !important;
     float: left;
     border-color: #F2F2F2;  
@@ -2290,7 +2281,6 @@ a:hover {
   }
 
   .card-box-c {
-    margin-bottom: 2rem;
     display: inline-flex !important;
     float: left;
     border-color: #F2F2F2;  
@@ -2305,7 +2295,6 @@ a:hover {
   }
 
   .card-box-c {
-    margin-bottom: 2rem;
     display: inline-flex !important;
     float: left;
     border-color: #F2F2F2;  
