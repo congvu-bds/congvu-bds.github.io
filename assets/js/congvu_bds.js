@@ -52,7 +52,7 @@ function init() {
 
 function renderHotNews(){
     dataHotNews = [];
-    for(var count = 0; count < data.length; count++){
+    for(var count = data.length - 1; count >= 0; count++){
         if(data[count]['hotnews'] == "Yes" && data[count]['status'] == "on-sale"){
             dataHotNews.push(data[count]);
         }
@@ -60,15 +60,6 @@ function renderHotNews(){
     checkStatusSearch = false;
     renderToWebsite(dataHotNews);
 }
-
-
-
-// let qu_ResultOfSearch = '';
-// let queryResultOfSearch = '';
-// let urlResultOfSearch = '';
-// let conditionOfSearch = 'Select * WHERE A != "" and B != "No"';
-// let qu_HotNews = 'Select * WHERE A != "" and B != "No"';
-
 
 function showResultOfSearch(){
     IndexTypeRealEstate = document.getElementById("Type").value;    
