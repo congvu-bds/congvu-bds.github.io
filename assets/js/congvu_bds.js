@@ -7,6 +7,7 @@ const queryAllData = encodeURIComponent(qu_AllData);
 const urlAllData = `${base}&sheet=${sheetName}&tq=${queryAllData}`;
 
 let data = [];
+let dataAll = [];
 let dataHotNews = [];
 let dataSearch = [];
 
@@ -42,22 +43,23 @@ function init() {
                     
                     row[ele] = (main.c[ind] != null) ? main.c[ind].v : '';
                 })
-                data.push(row);
+                dataAll.push(row);
                 
             })
-            
+            data = dataAll;
             renderHotNews();
         })
 }
 
 function renderHotNews(){
     dataHotNews = [];
-    for(var count = data.length - 1; count >= 0; count++){
-        if(data[count]['hotnews'] == "Yes" && data[count]['status'] == "on-sale"){
-            dataHotNews.push(data[count]);
+    for(var count = dataAll.length - 1; count >= 0; count--){
+        if(dataAll[count]['hotnews'] == "Yes" && dataAll[count]['status'] == "on-sale"){
+            dataHotNews.push(dataAll[count]);
         }
     }
     checkStatusSearch = false;
+    data = dataHotNews;
     renderToWebsite(dataHotNews);
 }
 
@@ -68,35 +70,35 @@ function showResultOfSearch(){
     IndexRangePrice = document.getElementById("garages").value;
     
     dataSearch = [];
-    for(var count = 0; count < data.length; count++){
+    for(var count = dataAll.length - 1; count >= 0; count--){
         let checkPushToArray = false;
         let countNumberCondition = 0;
         let countNumberConditionAccept = 0;
-        if(IndexTypeRealEstate != "0" || IndexPlace != "0" || IndexTypeService != "0" || IndexRangePrice != "0" &&  data[count]['status'] == "on-sale"){
+        if(IndexTypeRealEstate != "0" || IndexPlace != "0" || IndexTypeService != "0" || IndexRangePrice != "0" &&  dataAll[count]['status'] == "on-sale"){
             if(IndexTypeRealEstate != "0"){
                 countNumberCondition = countNumberCondition + 1;
-                if(data[count]['indextyperealestate'] == IndexTypeRealEstate){
+                if(dataAll[count]['indextyperealestate'] == IndexTypeRealEstate){
                     countNumberConditionAccept = countNumberConditionAccept + 1;
                 }
             }
             if(IndexPlace != "0"){
                 countNumberCondition = countNumberCondition + 1;
-                if(data[count]['indexplace'] == IndexPlace){
+                if(dataAll[count]['indexplace'] == IndexPlace){
                     countNumberConditionAccept = countNumberConditionAccept + 1;
                 }
             }
             if(IndexTypeService != "0"){
                 countNumberCondition = countNumberCondition + 1;
-                if(data[count]['indextypeservice'] == IndexTypeService){
+                if(dataAll[count]['indextypeservice'] == IndexTypeService){
                     countNumberConditionAccept = countNumberConditionAccept + 1;
                 }
-                else if(IndexTypeService == "1" && data[count]['indextypeservice'] == "2"){
+                else if(IndexTypeService == "1" && dataAll[count]['indextypeservice'] == "2"){
                     countNumberConditionAccept = countNumberConditionAccept + 1;
                 }
             }
             if(IndexRangePrice != "0"){
                 countNumberCondition = countNumberCondition + 1;
-                if(data[count]['indexrangeprice'] == IndexRangePrice){
+                if(dataAll[count]['indexrangeprice'] == IndexRangePrice){
                     countNumberConditionAccept = countNumberConditionAccept + 1;
                 }
             }
@@ -104,14 +106,15 @@ function showResultOfSearch(){
                 checkPushToArray = true;
             }           
         }
-        else if(data[count]['status'] == "on-sale"){
+        else if(dataAll[count]['status'] == "on-sale"){
             checkPushToArray = true;
         }
         if(checkPushToArray == true){
-            dataSearch.push(data[count]);
+            dataSearch.push(dataAll[count]);
         }
     }
     checkStatusSearch = true;
+    data = dataSearch;
     renderToWebsite(dataSearch);    
 }
 
