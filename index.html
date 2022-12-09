@@ -417,10 +417,12 @@
       
         if (prevScrollpos < currentScrollPos && currentScrollPos > 100) {
           document.getElementById("navbarBDS").style.display = "none";
-        } else {
+          prevScrollpos = currentScrollPos;
+        } else if(prevScrollpos > currentScrollPos + 100){
           document.getElementById("navbarBDS").style.display = "block";
+          prevScrollpos = currentScrollPos;
         }
-        prevScrollpos = currentScrollPos;
+        
 
       }
       
