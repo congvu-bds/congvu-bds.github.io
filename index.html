@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="CongVu-BDS" />
+  <meta property="og:title" content="CongVu-BĐS" />
   <meta property="og:description" content="Nơi tìm kiếm các Bất Động Sản tốt tại Tp.HCM" />
   <meta property="og:url" content="https://congvu-bds.github.io/" />
   <meta property="og:image" content="https://congvu-bds.github.io/assets/img/favicon.png" />
   
-  <title>CongVu-BDS</title>
+  <title>CongVu-BĐS</title>
   <meta content="Nơi tìm kiếm các Bất Động Sản tốt tại Tp.HCM" name="description">
   <meta content="" name="keywords">
 
@@ -43,7 +43,7 @@
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" href="index.html">CongVu<span class="color-b">BDS</span></a>
+      <a class="navbar-brand text-brand" href="index.html">CongVu<span class="color-b">BĐS</span></a>
 
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
@@ -53,11 +53,11 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Giới thiệu</a>
+            <a class="nav-link" href="form.html">Biểu mẫu</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Liên hệ</a>
+            <a class="nav-link" href="contact.html">Liên hệ</a>
           </li>
         </ul>
       </div>
@@ -180,12 +180,15 @@
     <!-- ======= Services Section ======= -->
     <section class="section-services section-t8">
       <div class="container">
-        <div id="rowRenderTitle" class="row">
-          
+        <div id="rowRenderTitle" class="row">          
         </div>
-              
+
         <div id="rowRenderInfo" class="row">          
-        </div>        
+        </div>
+
+        <div id="rowRenderPagination" class="pagination">                
+        </div>
+
       </div>
     </section><!-- End Services Section -->
 
@@ -359,7 +362,7 @@
         
       document.getElementById("myModalContent").innerHTML = htmlModalInfoContent;
       modal.style.display = "block";
-      showSlides(1);
+      showSlides(slideIndex = 1);
       document.getElementById("navbarBDS").style.display = "none";
     }
     
@@ -367,6 +370,7 @@
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
       modal.style.display = "none";
+      document.getElementById("navbarBDS").style.display = "block";
     }
 
     // When the user clicks anywhere outside of the modal, close it
@@ -400,8 +404,8 @@
         dots[i].className = dots[i].className.replace(" active", "");
       }
       slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
+      //dots[slideIndex-1].className += " active";
+      //captionText.innerHTML = dots[slideIndex-1].alt;
     }
 
   </script>
