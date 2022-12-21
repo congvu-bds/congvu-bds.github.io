@@ -258,6 +258,12 @@ a:hover {
     top: 9% !important;
     padding: 20px !important;
   }
+
+  /*------/ Search area /------*/
+  .form-search {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
   
 }
 
@@ -275,6 +281,12 @@ a:hover {
   .mySlidesNext {
     top: 5% !important;
     padding: 14px !important;
+  }
+
+  /*------/ Search area /------*/
+  .form-search {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
   
 }
@@ -317,7 +329,6 @@ a:hover {
     margin-right: auto;
     background-color: #4c5751;
   }
-  
 }
 
 @media (max-width: 575px) {
@@ -333,6 +344,26 @@ a:hover {
   .mySlidesNext {
     top: 3% !important;
     padding: 12px !important;
+  }
+  /*------/ Search area /------*/
+  .form-search {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  
+  .img-social-CongVu{
+    max-height: 80% !important;
+    max-width: 80% !important;
+  }
+
+  .main-contactCongVu{
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+  }
+
+  .main-form-real-estate-CongVu{
+    margin-left: 10px !important;
+    margin-right: 10px !important;
   }
 }
 
@@ -350,6 +381,16 @@ a:hover {
     top: 2% !important;
     padding: 12px !important;
   }
+
+  .main-contactCongVu{
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+  }
+
+  .main-form-real-estate-CongVu{
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
 }
 
 @media (max-width: 427px) {
@@ -365,6 +406,26 @@ a:hover {
   .mySlidesNext {
     top: 1% !important;
     padding: 12px !important;
+  }
+  /*------/ Search area /------*/
+  .form-search {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  .img-social-CongVu{
+    max-height: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .main-contactCongVu{
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+  }
+
+  .main-form-real-estate-CongVu{
+    margin-left: 10px !important;
+    margin-right: 10px !important;
   }
 }
 
@@ -382,6 +443,16 @@ a:hover {
     top: 1% !important;
     padding: 12px !important;
   }
+
+  .main-contactCongVu{
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+  }
+
+  .main-form-real-estate-CongVu{
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
 }
 
 @media (max-width: 360px) {
@@ -397,6 +468,16 @@ a:hover {
   .mySlidesNext {
     top: 1% !important;
     padding: 12px !important;
+  }
+
+  .main-contactCongVu{
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+  }
+
+  .main-form-real-estate-CongVu{
+    margin-left: 10px !important;
+    margin-right: 10px !important;
   }
 }
 
@@ -1212,6 +1293,8 @@ a:hover {
 /*------/ Search area /------*/
 .form-search {
   padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
   margin-top: 120px;
 }
 .form-search .form-a .row{  
@@ -2747,3 +2830,152 @@ footer .copyright-footer {
 footer .credits {
   font-size: 14px;
 }
+
+
+/*--------------------------------------------------------------
+# Contact CongVu
+--------------------------------------------------------------*/
+.contact-footer{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.contact-CongVu{
+  margin: auto !important;
+  padding-top: 125px;
+}
+
+.introduce-CongVu{
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.social-CongVu{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f1f1f1;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-contact-CongVu{  
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.social-CongVu{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.img-social-CongVu{
+  max-height: 70%;
+  max-width: 70%;
+}
+
+.main-contactCongVu{
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+/*--------------------------------------------------------------
+# Form Real Estate CongVu
+--------------------------------------------------------------*/
+.main-form-real-estate-CongVu{
+  margin-top: 140px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.title-form-real-estate-CongVu{
+  color: #0e7fdb;
+  font-weight: bold;
+}
+
+.content-form-real-estate-CongVu{
+  text-align: justify;
+}
+
+.table-form-real-estate-CongVu,
+.table-row-form-real-estate-CongVu,
+.table-header-form-real-estate-CongVu,
+.table-data-form-real-estate-CongVu{
+  border:1px solid black;
+}
+
+.table-header-form-real-estate-CongVu{
+  text-align: center;
+  font-size: 1.5rem;
+  color: #C20000;
+}
+
+.table-data-form-real-estate-CongVu{
+  padding: 10px;  
+}
+
+.table-form-real-estate-CongVu{
+  width: 100%;
+}
+
+.button-preview{
+  background-color: #049b43;
+  color: #fff;
+  border-radius: 0.5rem;
+  border-color: #049b43;
+}
+
+.button-preview:hover{
+  background-color: #4edd8a;
+  border-color: #4edd8a;
+}
+
+.button-PDF{
+  background-color: #a10e0e;
+  color: #fff;
+  border-radius: 0.5rem;
+  border-color: #a10e0e;
+}
+
+.button-PDF:hover{
+  background-color: #df1e1e;
+  border-color: #df1e1e;
+}
+
+.button-Word{
+  background-color: #10069b;
+  color: #fff;
+  border-radius: 0.5rem;
+  border-color: #10069b;
+}
+
+.button-Word:hover{
+  background-color: #4337e9;
+  border-color: #4337e9;
+}
+
+/*--------------------------------------------------------------
+# Pagination Real Estate CongVu
+--------------------------------------------------------------*/
+.pagination {
+  display: inline-block;
+}
+
+.pagination button {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-width: 1px;
+  margin: 1px;
+}
+
+.pagination button.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination button:hover:not(.active) {background-color: #ddd;}
