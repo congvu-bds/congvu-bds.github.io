@@ -71,7 +71,7 @@ function renderHotNews(){
         currentPage = 0;
     }
     else if(data.length%5 == 0){
-        numberPage = (data.length - 1)/5;
+        numberPage = data.length/5;
         currentPage = 1;
     }
     else{
@@ -138,7 +138,7 @@ function showResultOfSearch(){
         currentPage = 0;
     }
     else if(data.length%5 == 0){
-        numberPage = (data.length - 1)/5;
+        numberPage = data.length/5;
         currentPage = 1;
     }
     else{
