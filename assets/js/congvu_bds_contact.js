@@ -62,12 +62,12 @@ function renderContactInfo(data){
     htmlMainContactInfoCongVu = ""
     htmlMainContactInfoCongVu = htmlMainContactInfoCongVu
                     + "<div class=\"row contact-CongVu\">"
-                    + "<div class=\"col-md-4 col-sm-4 col-12\">"
+                    + "<div class=\"col-md-4 col-sm-12 col-12\">"
                     + "<img class=\"img-contact-CongVu\" src=\""
                     + data[0]['linkavatar']
                     + "\">"
                     + "</div>"
-                    + "<div class=\"col-md-8 col-sm-8 col-12 introduce-CongVu\">"
+                    + "<div class=\"col-md-8 col-sm-12 col-12 introduce-CongVu\">"
                     + "<h2>"
                     + data[0]['title']
                     + "</h2>"
@@ -76,6 +76,15 @@ function renderContactInfo(data){
                     + "</p>"
                     + "</div>"
                     + "</div>"
+
+                    + "<div class=\"row contact-CongVu2\">"
+                    + "<div class=\"col-md-12 col-sm-12 col-12\">"
+                    +"<p>"
+                    + data[0]['endsentence']
+                    + "</p>"
+                    + "</div>"
+                    + "</div>"
+
                     + "<div class=\"row social-CongVu\">"
                     
                     + "<div class=\"col-md-3 col-sm-3 col-3\">"
