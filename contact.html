@@ -65,10 +65,31 @@
     </div>
   </nav><!-- End Header/Navbar -->
 
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-main-content">
+        
+
+        <div class="modal-container">
+          <div id="myModalVlog"></div>
+          
+          <div id="myModalContent"></div>
+        </div>
+
+        
+      </div>
+    </div>
+
+    
+  </div>
+
 
 
   <main id="main" class="main-contactCongVu">
-  </main><!-- End #main -->
+  </main><!-- End #main --> 
 
   <!-- ======= Footer ======= -->
   
@@ -99,16 +120,54 @@
 </body>
 <script>
   let prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {     
-      let currentScrollPos = window.pageYOffset;
-    
-      if (prevScrollpos < currentScrollPos && currentScrollPos > 100) {
-        document.getElementById("navbarBDS").style.display = "none";
-        prevScrollpos = currentScrollPos;
-      } else if(prevScrollpos > currentScrollPos + 100){
-        document.getElementById("navbarBDS").style.display = "block";
-        prevScrollpos = currentScrollPos;
-      }      
+    window.onscroll = function() {      
+      if(modal.style.display === "block"){
+        document.getElementById("navbarBDS").style.display = "none";        
+      }
+      else{
+        let currentScrollPos = window.pageYOffset;
+      
+        if (prevScrollpos < currentScrollPos && currentScrollPos > 100) {
+          document.getElementById("navbarBDS").style.display = "none";
+          prevScrollpos = currentScrollPos;
+        } else if(prevScrollpos > currentScrollPos + 100){
+          document.getElementById("navbarBDS").style.display = "block";
+          prevScrollpos = currentScrollPos;
+        }
+        
+
+      }
+      
     };
+
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+      modal.style.display = "none";
+      document.getElementById("navbarBDS").style.display = "block";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+  function modalInfoRender(){
+      var htmlModalInfoContent = "";
+      
+      htmlModalInfoContent = htmlModalInfoContent + "<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLScOqKUrKzZZ2wrnZaqbUSkT8B6JhIXe1Pw8Qmc9C-ZscMPvRQ/viewform?embedded=true\""
+                                                  + " width=\"100%\" height=\"720\""                                                  
+                                                  + "frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…</iframe>";
+        
+      document.getElementById("myModalContent").innerHTML = htmlModalInfoContent;
+      modal.style.display = "block";
+      document.getElementById("navbarBDS").style.display = "none";
+    }
 </script>
 </html>
